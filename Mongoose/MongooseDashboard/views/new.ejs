@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Add a monkey</title>
+</head>
+
+<style>
+    form{
+        width: 600px;
+        margin: auto;
+        background-color: black;
+        color: white;
+        border-radius: 25px;
+        border: solid 1px darkgray;
+        font-family: dekko;
+        letter-spacing: 2px;
+        padding:20px;
+        margin-top:10px;
+    }
+    h3{
+        max-width: 600px;
+        margin: auto;
+        font-family: dekko;
+        letter-spacing: 2px;
+        padding:20px;
+    }
+</style>
+
+<body>
+    <h3>Add a Monkey</h3>
+    <!-- has to have a slash in action -->
+    <form action="/add" method="POST"> 
+        <div class="form-group">
+          <label for="name">Give Monkey a Name!</label>
+          <input name="name" type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="type">What Type of Monkey?</label>
+          <input name="type" type="text" class="form-control" placeholder="Type">
+        </div>
+        <div class="form-group">
+            <label for="age">How old?</label>
+            <input name="age" type="number" class="form-control" placeholder="Age">
+          </div>
+        <input class="btn btn-warning" type="submit" name="submit">
+    </form>
+</body>
+</html>

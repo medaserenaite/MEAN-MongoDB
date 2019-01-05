@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>All Monkeys</title>
+</head>
+<style>
+    body{
+        width: 1000px;
+        margin: 50px;
+    }
+    #allmonkeys{
+        background-color: black;
+        font-family: dekko;
+        letter-spacing: 2px;
+        color: white;
+        padding:20px;
+        border-radius: 25px;
+        border: solid 1px darkgray;
+        margin: 10px;
+    }
+    #indmonkey{
+        border: 1px solid rgb(255, 217, 0);
+        padding:15px;
+        margin: 10px;
+        border-radius: 15px;
+        background-color: rgb(43, 43, 43);
+    }
+    span{
+        color:rgb(255, 217, 0);
+    }
+</style>
+<body>
+    <h3>All the Monkeys</h3>
+    <a href="/monkey/new"><button type="button" class="btn btn-warning">Add a Monkey</button></a>
+    <div id="allmonkeys">
+        <% for (var x in arr) { %>
+        <div id="indmonkey">
+            <h3><%= arr[x].name %></h3>
+            <h4><span>type:</span> <%= arr[x].type %></h4>
+            <h4><span>age:</span> <%= arr[x].age %></h4><br>
+            <form action="/delete/<%=arr[x]._id%>" method="POST">
+                <input type="submit" value="Delete" class="btn btn-danger">
+            </form><br>
+            <a href="/show/<%=arr[x]._id%>"><button class="btn btn-light">Show</button></a>
+
+        </div>
+        <% } %>            
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Monkey</title>
+</head>
+
+<style>
+    #box{
+        background-color: black;
+        font-family: dekko;
+        letter-spacing: 2px;
+        color: white;
+        padding:20px;
+        border-radius: 25px;
+        border: solid 1px darkgray;
+        margin:auto;
+        margin-top: 10px;
+        width: 500px;
+    }
+</style>
+
+<body>
+    <div id="box">
+    <h3><%= monk.name %></h3>
+    <h4><%= monk.type %></h4>
+    <h4><%= monk.age %></h4>
+    <a href="/edit/<%= monk._id %>"><button class="btn btn-info">Edit</button></a>
+    </div>
+</body>
+</html>

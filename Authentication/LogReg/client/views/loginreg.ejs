@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login and Registration</title>
+</head>
+<body>
+	<div id="main">
+		<fieldset>
+			<legend>Register</legend>
+			<form method="post" action="/register">
+				<label for="email">Email: </label>
+				<input type="text" name="email">
+
+				<label for="first_name">First Name: </label>
+				<input type="text" name="first_name">
+
+				<label for="last_name">Last Name: </label>
+				<input type="text" name="last_name">
+
+				<label for="password">Password: </label>
+				<input type="password" name="password">
+
+				<label for="password_conf">Confirm password: </label>
+				<input type="password" name="password_conf">
+
+				<label for="bday">Date of Birth: </label>
+				<input type="date" name="bday">
+
+				<input type="submit" name="submit" value="Register">
+			</form>
+		</fieldset>
+
+		<fieldset>
+			<legend>Login</legend>
+			<form method="post" action="/login">
+				<label for="email">Email:</label>
+				<input type="text" name="email">
+				<label for="password">Password: </label>
+				<input type="password" name="password">
+				<input type="submit" name="submit" value="Login">
+			</form>
+		</fieldset>
+	</div>
+	<% if(typeof(errors) != 'undefined' && errors.length > 0){ %>
+		<fieldset>
+			<legend>Errors</legend>
+			<ul>
+			<%errors.forEach(function(error){%>
+				<li><%=error %></li>
+			<% }) %>
+			</ul>
+		</fieldset>
+	<% } %>
+</body>
+</html>
